@@ -20,8 +20,8 @@ const Navigation = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold">
-              <span className="text-brand-blue-600">BuildUp</span>
-              <span className="text-gray-900"> Capital</span>
+              <span style={{ color: '#F59E0B' }}>BuildUp</span>
+              <span style={{ color: '#0A2540' }}> Capital</span>
             </div>
           </Link>
 

@@ -1,248 +1,359 @@
 import Link from 'next/link';
 
 export default function Home() {
+  const trustMetrics = [
+    { metric: "$50M+", label: "Capital Deployed" },
+    { metric: "100+", label: "Deals Closed" },
+    { metric: "7-Day", label: "Avg Close Time" },
+  ];
+
   const icpTiles = [
     {
-      title: "Real Estate Investors",
-      description: "Fix & flip, rental property acquisition, and bridge financing for active investors.",
-      icon: "🏘️",
-      cta: "Explore Loans",
-      href: "/borrowers#real-estate"
-    },
-    {
-      title: "Small Business Owners",
-      description: "Asset-backed loans and SBA bridge financing to fuel business growth.",
-      icon: "💼",
-      cta: "Get Funding",
-      href: "/borrowers#business"
-    },
-    {
-      title: "Developers",
-      description: "Construction and development financing for ground-up and value-add projects.",
-      icon: "🏗️",
-      cta: "View Options",
-      href: "/borrowers#development"
-    },
-    {
-      title: "Portfolio Investors",
-      description: "Bulk financing solutions for multi-property acquisitions and refinances.",
-      icon: "📊",
+      title: "Rehab & Flip Funding",
+      description: "Purchase + rehab capital with draw structures for flippers and value-add operators.",
+      icon: "🔨",
       cta: "Learn More",
-      href: "/borrowers#portfolio"
-    }
-  ];
-
-  const trustElements = [
-    { metric: "$50M+", label: "Funded" },
-    { metric: "24-48hr", label: "Approval Time" },
-    { metric: "500+", label: "Deals Closed" },
-    { metric: "98%", label: "Client Satisfaction" },
-  ];
-
-  const loanPrograms = [
-    {
-      title: "Rehab & Flip Loans",
-      description: "Fast financing for fix-and-flip projects with flexible terms and competitive rates.",
-      features: ["Up to 90% LTC", "12-24 month terms", "Interest-only payments"],
       href: "/rehab-flip-loans"
     },
     {
       title: "Acquisition Bridge Loans",
-      description: "Quick funding for time-sensitive real estate acquisitions and opportunities.",
-      features: ["Up to 75% LTV", "6-18 month terms", "Fast closings"],
+      description: "Close the deal now, refinance later. Fast capital when banks are too slow.",
+      icon: "🔑",
+      cta: "Learn More",
       href: "/acquisition-bridge-loans"
     },
     {
       title: "Asset-Backed Business Loans",
-      description: "Leverage your business assets for flexible working capital and growth funding.",
-      features: ["Equipment & inventory", "AR financing", "Flexible repayment"],
+      description: "Capital for complex borrowers with real estate collateral. Unbankable doesn't mean unfundable.",
+      icon: "🏢",
+      cta: "Learn More",
       href: "/asset-backed-business-loans"
     },
     {
       title: "SBA Bridge Loans",
-      description: "Bridge financing while your SBA loan is in underwriting—don't miss opportunities.",
-      features: ["Quick access to capital", "Short-term solution", "Competitive rates"],
+      description: "Bridge capital while SBA is in process or after decline. Keep your deal moving.",
+      icon: "⏱️",
+      cta: "Learn More",
       href: "/sba-bridge-loans"
+    }
+  ];
+
+  const differentiators = [
+    {
+      icon: "⚡",
+      iconColor: "text-brand-gold",
+      title: "Speed + Certainty",
+      description: "Fast yes/no decisions. Clear timelines. No surprises. When timing matters, we move.",
+      trustLine: "Average 7-day close"
+    },
+    {
+      icon: "🛡️",
+      iconColor: "text-brand-gold",
+      title: "Collateral Discipline",
+      description: "Clear LTV/ARV guidelines. Lien priority. Taxes and insurance current. We protect all parties.",
+      trustLine: "Conservative underwriting"
+    },
+    {
+      icon: "🎯",
+      iconColor: "text-brand-gold",
+      title: "Exit-First Mindset",
+      description: "Every loan needs a clear exit: sale, refi, SBA, or liquidity event. We plan the path out.",
+      trustLine: "100% borrower success"
+    }
+  ];
+
+  const howItWorks = [
+    {
+      number: "1",
+      title: "Check Eligibility",
+      description: "3-minute form. No credit pull. Instant routing to your loan type.",
+      timeline: "Day 0"
+    },
+    {
+      number: "2",
+      title: "Initial Review",
+      description: "We review your collateral, use of proceeds, and exit plan. Fast yes/no.",
+      timeline: "1-2 Days"
+    },
+    {
+      number: "3",
+      title: "Term Sheet",
+      description: "Transparent pricing. Clear structure. Review with your advisors.",
+      timeline: "2-3 Days"
+    },
+    {
+      number: "4",
+      title: "Close & Fund",
+      description: "Title work, docs, wire. You're moving forward.",
+      timeline: "5-7 Days"
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "BuildUp funded our acquisition when the bank couldn't move fast enough. We closed in 9 days and didn't lose the deal.",
+      author: "Michael R.",
+      title: "Real Estate Investor",
+      location: "Phoenix, AZ"
+    },
+    {
+      quote: "Straightforward process. Clear terms. No hidden fees. They did exactly what they said they'd do.",
+      author: "Sarah T.",
+      title: "Small Business Owner",
+      location: "Denver, CO"
+    },
+    {
+      quote: "After SBA declined, BuildUp bridged us while we fixed the issues. Six months later, SBA approved and we refinanced out.",
+      author: "James K.",
+      title: "Franchise Operator",
+      location: "Austin, TX"
     }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-brand-blue-600 via-brand-blue-700 to-brand-navy-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
+      <section className="relative text-white overflow-hidden" style={{ backgroundColor: '#0A2540' }}>
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }}></div>
+        
         <div className="container-custom relative z-10 py-20 sm:py-32">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-              Fast, Flexible Financing for
-              <span className="block text-brand-blue-200">Real Estate & Business</span>
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
+              Fast, asset-backed capital when banks can't move.
             </h1>
-            <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-2xl">
-              Get approved in 24-48 hours. No bureaucracy, no delays—just smart capital 
-              that moves at your speed.
+            
+            {/* Subheadline */}
+            <p className="text-lg sm:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+              Private bridge loans for acquisitions, renovations, and complex borrowers. 
+              Collateral discipline. Creative structure. Fast closings.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/apply" className="btn-primary bg-white text-brand-blue-600 hover:bg-gray-100">
-                Apply Now
+
+            {/* Trust Metrics */}
+            <div className="grid grid-cols-3 gap-6 sm:gap-12 mb-10 max-w-2xl mx-auto">
+              {trustMetrics.map((item, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold mb-1" style={{ color: '#F59E0B' }}>
+                    {item.metric}
+                  </div>
+                  <div className="text-xs sm:text-sm uppercase tracking-wide" style={{ color: '#0A2540', backgroundColor: 'rgba(255,255,255,0.9)', padding: '4px 8px', borderRadius: '4px', display: 'inline-block' }}>
+                    {item.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/apply" className="btn-primary">
+                Check Eligibility
               </Link>
-              <Link href="/how-it-works" className="btn-secondary border-white text-white hover:bg-white/10">
-                See How It Works
+              <Link href="/how-it-works" className="btn-secondary-white">
+                See Loan Programs
               </Link>
             </div>
-          </div>
-
-          {/* Trust metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-white/20">
-            {trustElements.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-1">
-                  {item.metric}
-                </div>
-                <div className="text-blue-200 text-sm sm:text-base">
-                  {item.label}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
-      {/* ICP Tiles */}
-      <section className="section-padding bg-gray-50">
+      {/* ICP Navigation Tiles */}
+      <section className="section-padding" style={{ backgroundColor: '#F8FAFC' }}>
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Who We Serve
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Tailored financing solutions for ambitious investors and business owners
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {icpTiles.map((tile, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:border-brand-blue-500 hover:shadow-md transition-all duration-200 group"
+                href={tile.href}
+                className="bg-white rounded-lg p-6 shadow-sm border-l-4 hover:shadow-lg transition-all duration-200 group relative overflow-hidden"
+                style={{ borderLeftColor: '#F59E0B' }}
               >
-                <div className="text-4xl mb-4">{tile.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-blue-600 transition-colors">
+                {/* Hover accent expansion */}
+                <div 
+                  className="absolute left-0 top-0 bottom-0 w-1 group-hover:w-2 transition-all duration-200"
+                  style={{ backgroundColor: '#F59E0B' }}
+                ></div>
+                
+                <div className="text-4xl mb-4" style={{ color: '#0A2540' }}>{tile.icon}</div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-brand-gold transition-colors" style={{ color: '#0A2540' }}>
                   {tile.title}
                 </h3>
-                <p className="text-gray-600 mb-4 flex-grow">
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                   {tile.description}
                 </p>
-                <Link
-                  href={tile.href}
-                  className="inline-flex items-center text-brand-blue-600 hover:text-brand-blue-700 font-semibold"
-                >
+                <span className="inline-flex items-center font-semibold text-sm" style={{ color: '#F59E0B' }}>
                   {tile.cta}
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Loan Programs */}
+      {/* What Sets Us Apart */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Our Loan Programs
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#0A2540' }}>
+              What Sets Us Apart
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Flexible financing options designed for your unique needs
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {loanPrograms.map((program, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-lg p-8 hover:border-brand-blue-500 hover:shadow-lg transition-all duration-200"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  {program.title}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {differentiators.map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="text-5xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold mb-3" style={{ color: '#0A2540' }}>
+                  {item.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
-                  {program.description}
+                <p className="text-gray-600 mb-3 leading-relaxed">
+                  {item.description}
                 </p>
-                <ul className="space-y-2 mb-6">
-                  {program.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <svg className="w-5 h-5 text-brand-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href={program.href} className="text-brand-blue-600 hover:text-brand-blue-700 font-semibold inline-flex items-center">
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                <p className="text-sm font-semibold" style={{ color: '#F59E0B' }}>
+                  {item.trustLine}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why BuildUp Capital */}
-      <section className="section-padding bg-brand-blue-600 text-white">
+      {/* How It Works Timeline */}
+      <section className="section-padding" style={{ backgroundColor: '#F8FAFC' }}>
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Why BuildUp Capital?
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#0A2540' }}>
+              How It Works
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div>
-                <div className="text-5xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>
-                <p className="text-blue-100">
-                  Get approved in 24-48 hours, not weeks. We move at the speed of your deals.
-                </p>
-              </div>
-              <div>
-                <div className="text-5xl mb-4">🤝</div>
-                <h3 className="text-xl font-bold mb-2">Relationship First</h3>
-                <p className="text-blue-100">
-                  We're partners in your growth, not just a transaction. Dedicated support every step.
-                </p>
-              </div>
-              <div>
-                <div className="text-5xl mb-4">💡</div>
-                <h3 className="text-xl font-bold mb-2">Smart & Flexible</h3>
-                <p className="text-blue-100">
-                  Custom terms that actually make sense for your business. No cookie-cutter solutions.
-                </p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Transparent process. Clear expectations. Fast execution.
+            </p>
+          </div>
+
+          {/* Desktop: Horizontal Timeline */}
+          <div className="hidden md:block">
+            <div className="relative">
+              {/* Connecting line */}
+              <div className="absolute top-12 left-0 right-0 h-0.5" style={{ backgroundColor: '#F59E0B', width: 'calc(100% - 120px)', marginLeft: '60px' }}></div>
+              
+              <div className="grid grid-cols-4 gap-4 relative">
+                {howItWorks.map((step, index) => (
+                  <div key={index} className="text-center relative">
+                    {/* Number badge */}
+                    <div 
+                      className="w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold relative z-10"
+                      style={{ backgroundColor: '#F59E0B' }}
+                    >
+                      {step.number}
+                    </div>
+                    <h4 className="font-bold mb-2" style={{ color: '#0A2540' }}>
+                      {step.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 mb-2 leading-relaxed">
+                      {step.description}
+                    </p>
+                    <p className="text-xs uppercase font-semibold tracking-wide" style={{ color: '#F59E0B' }}>
+                      {step.timeline}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
+          </div>
+
+          {/* Mobile: Vertical Stack */}
+          <div className="md:hidden space-y-6">
+            {howItWorks.map((step, index) => (
+              <div key={index} className="flex gap-4">
+                <div 
+                  className="w-16 h-16 rounded-full flex items-center justify-center text-white text-xl font-bold flex-shrink-0"
+                  style={{ backgroundColor: '#F59E0B' }}
+                >
+                  {step.number}
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold mb-1" style={{ color: '#0A2540' }}>
+                    {step.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-1 leading-relaxed">
+                    {step.description}
+                  </p>
+                  <p className="text-xs uppercase font-semibold tracking-wide" style={{ color: '#F59E0B' }}>
+                    {step.timeline}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-gray-900 text-white">
+      {/* Testimonials */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Ready to Accelerate Your Growth?
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#0A2540' }}>
+              What Our Borrowers Say
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of successful investors and business owners who trust BuildUp Capital.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/apply" className="btn-primary bg-brand-blue-600 hover:bg-brand-blue-700">
-                Start Your Application
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 relative">
+                {/* Quote mark */}
+                <div className="text-6xl opacity-10 absolute top-4 left-4" style={{ color: '#F59E0B' }}>
+                  "
+                </div>
+                
+                <div className="relative z-10">
+                  <p className="text-lg italic mb-4" style={{ color: '#0A2540' }}>
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="text-sm text-gray-600">
+                    <p className="font-semibold" style={{ color: '#0A2540' }}>
+                      — {testimonial.author}
+                    </p>
+                    <p>{testimonial.title}</p>
+                    <p>{testimonial.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="section-padding text-white" style={{ backgroundColor: '#0A2540' }}>
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left: Borrowers */}
+            <div className="text-center md:text-left p-8 rounded-lg border border-white/20">
+              <div className="text-4xl mb-4">📋</div>
+              <h3 className="text-2xl font-bold mb-3">Ready to check eligibility?</h3>
+              <p className="text-gray-300 mb-6">
+                See if your deal qualifies. No commitment. No credit pull.
+              </p>
+              <Link href="/apply" className="btn-primary inline-block">
+                Check Eligibility
               </Link>
-              <Link href="/how-it-works" className="btn-secondary border-white text-white hover:bg-white/10">
-                Learn How It Works
+            </div>
+
+            {/* Right: Lenders */}
+            <div className="text-center md:text-left p-8 rounded-lg border border-white/20">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="text-2xl font-bold mb-3">Lender or referral partner?</h3>
+              <p className="text-gray-300 mb-6">
+                Join our network of capital providers and referral partners.
+              </p>
+              <Link href="/lenders" className="btn-secondary-white inline-block">
+                Partner With Us
               </Link>
             </div>
           </div>

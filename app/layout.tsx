@@ -13,24 +13,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "BuildUp Capital - Fast, Flexible Financing for Real Estate & Business",
+    default: "BuildUp Capital | Fast Bridge Loans for Real Estate & Business",
     template: "%s | BuildUp Capital"
   },
-  description: "BuildUp Capital provides fast, flexible financing solutions for real estate investors and small businesses. Get approved in 24-48 hours with our streamlined lending process.",
-  keywords: ["business lending", "real estate financing", "bridge loans", "SBA loans", "asset-based lending", "rehab loans", "flip financing"],
+  description: "Private bridge loans secured by real estate. Rehab, acquisition, asset-backed, and SBA bridge capital. Fast closings. Conservative underwriting. Average 7-day close.",
+  keywords: ["bridge loans", "real estate financing", "rehab loans", "acquisition loans", "asset-backed lending", "SBA bridge loans", "private lending", "fix and flip loans"],
   authors: [{ name: "BuildUp Capital" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://buildup.capital",
     siteName: "BuildUp Capital",
-    title: "BuildUp Capital - Fast, Flexible Financing",
-    description: "Fast, flexible financing solutions for real estate investors and small businesses.",
+    title: "BuildUp Capital - Fast, Asset-Backed Capital",
+    description: "Private bridge loans for acquisitions, renovations, and complex borrowers. Collateral discipline. Creative structure. Fast closings.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BuildUp Capital - Fast, Flexible Financing",
-    description: "Fast, flexible financing solutions for real estate investors and small businesses.",
+    title: "BuildUp Capital - Fast, Asset-Backed Capital",
+    description: "Private bridge loans for acquisitions, renovations, and complex borrowers. Average 7-day close.",
   },
   robots: {
     index: true,

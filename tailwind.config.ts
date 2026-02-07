@@ -9,22 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand color palette: white, black, blue
+        // Brand color palette - Research-driven redesign
         brand: {
-          blue: {
-            50: '#eff6ff',
-            100: '#dbeafe',
-            200: '#bfdbfe',
-            300: '#93c5fd',
-            400: '#60a5fa',
-            500: '#3b82f6', // Primary blue
-            600: '#2563eb',
-            700: '#1d4ed8',
-            800: '#1e40af',
-            900: '#1e3a8a',
-            950: '#172554',
-          },
+          // Primary Colors
           navy: {
+            DEFAULT: '#0A2540', // Main navy for headers/trust
             50: '#f0f4f8',
             100: '#d9e2ec',
             200: '#bcccdc',
@@ -34,8 +23,43 @@ const config: Config = {
             600: '#486581',
             700: '#334e68',
             800: '#243b53',
-            900: '#102a43',
-          }
+            900: '#0A2540', // Updated to match new navy
+          },
+          blue: {
+            DEFAULT: '#2563EB', // Strategic blue for links/secondary CTAs
+            50: '#eff6ff',
+            100: '#dbeafe',
+            200: '#bfdbfe',
+            300: '#93c5fd',
+            400: '#60a5fa',
+            500: '#3b82f6',
+            600: '#2563eb',
+            700: '#1d4ed8',
+            800: '#1e40af',
+            900: '#1e3a8a',
+          },
+          gold: {
+            DEFAULT: '#F59E0B', // NEW - Primary CTAs, highlights
+            50: '#fffbeb',
+            100: '#fef3c7',
+            200: '#fde68a',
+            300: '#fcd34d',
+            400: '#fbbf24',
+            500: '#f59e0b',
+            600: '#d97706',
+            700: '#b45309',
+            800: '#92400e',
+            900: '#78350f',
+          },
+          gray: {
+            deep: '#1E293B', // NEW - Body text (softer than black)
+            light: '#64748B', // NEW - Secondary text
+            bg: '#F8FAFC', // NEW - Off-white backgrounds
+          },
+          // Semantic colors
+          success: '#10B981',
+          error: '#EF4444',
+          info: '#3B82F6',
         },
       },
       fontFamily: {
