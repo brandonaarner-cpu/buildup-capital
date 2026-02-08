@@ -1,5 +1,6 @@
 import { generateMetadata as genMeta } from '../metadata';
 import Link from 'next/link';
+import InvestorDownloadForm from '@/components/InvestorDownloadForm';
 
 export const metadata = genMeta({
   title: 'Free Investor Resources | BuildUp Capital',
@@ -122,82 +123,7 @@ export default function ResourcesPage() {
 
               {/* Right: Download Form */}
               <div className="lg:sticky lg:top-24">
-                <div className="bg-white rounded-xl shadow-2xl p-8 border-2 border-gray-200">
-                  <div className="text-center mb-6">
-                    <div className="text-5xl mb-3">📖</div>
-                    <h3 className="text-2xl font-bold mb-2" style={{ color: '#0A2540' }}>
-                      Download Your Free Guide
-                    </h3>
-                    <p className="text-gray-600">
-                      20 pages | PDF format | Instant delivery
-                    </p>
-                  </div>
-
-                  <form className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-1">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-brand-gold focus:ring-2 focus:ring-yellow-200 transition-all"
-                        placeholder="John Smith"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-1">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-brand-gold focus:ring-2 focus:ring-yellow-200 transition-all"
-                        placeholder="john@example.com"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="portfolio" className="block text-sm font-bold text-gray-700 mb-1">
-                        Current Investments (Optional)
-                      </label>
-                      <select
-                        id="portfolio"
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-brand-gold focus:ring-2 focus:ring-yellow-200 transition-all"
-                      >
-                        <option value="">Select one...</option>
-                        <option value="airbnb">Short-term rentals (Airbnb)</option>
-                        <option value="ltr">Long-term rentals</option>
-                        <option value="syndications">Real estate syndications</option>
-                        <option value="stocks">Stocks/REITs</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl"
-                      style={{ backgroundColor: '#F59E0B' }}
-                    >
-                      📧 Send Me the Guide
-                    </button>
-
-                    <p className="text-xs text-gray-500 text-center">
-                      No spam. Unsubscribe anytime. We respect your privacy.
-                    </p>
-                  </form>
-
-                  <div className="mt-6 pt-6 border-t-2 border-gray-100">
-                    <p className="text-sm text-gray-600 text-center font-medium">
-                      ✓ 20-page comprehensive guide<br />
-                      ✓ Instant email delivery<br />
-                      ✓ No credit card required
-                    </p>
-                  </div>
-                </div>
+                <InvestorDownloadForm />
 
                 {/* Trust Signals */}
                 <div className="mt-6 text-center text-sm text-gray-600">
