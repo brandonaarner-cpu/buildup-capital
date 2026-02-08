@@ -42,10 +42,10 @@ export default function Home() {
                       I Need Capital
                     </h2>
                     <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                      Fast bridge loans for acquisitions, renovations, and complex deals.
+                      The deal closes in 14 days. Your bank needs 60. We'll fund it in 7.
                     </p>
                     <div className="inline-flex items-center font-bold text-lg" style={{ color: '#F59E0B' }}>
-                      Get Started
+                      See If You Qualify (2 min)
                       <svg className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
@@ -63,10 +63,10 @@ export default function Home() {
                       I Have Capital
                     </h2>
                     <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                      Monthly income without tenants, backed by real assets.
+                      Income without tenants, toilets, or market whiplash.
                     </p>
                     <div className="inline-flex items-center font-bold text-lg" style={{ color: '#F59E0B' }}>
-                      Learn More
+                      Download Free Guide
                       <svg className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
@@ -88,6 +88,34 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Badges */}
+      <section className="py-8 bg-gray-50 border-y border-gray-200">
+        <div className="container-custom">
+          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <span className="text-green-600 text-xl">✓</span>
+              <span>Licensed Lender</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600 text-xl">✓</span>
+              <span>Asset-Backed Only</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600 text-xl">✓</span>
+              <span>First Lien Priority</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600 text-xl">✓</span>
+              <span>25 Years Experience</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600 text-xl">✓</span>
+              <span>Bank-Level Security</span>
             </div>
           </div>
         </div>
@@ -160,7 +188,7 @@ export default function Home() {
                 See if your deal qualifies. No commitment. No credit pull.
               </p>
               <Link href="/apply" className="btn-primary inline-block">
-                Check Eligibility
+                Get Your Answer in 24 Hours
               </Link>
             </div>
 
@@ -172,7 +200,7 @@ export default function Home() {
                 Learn about asset-backed private credit strategies.
               </p>
               <Link href="/invest" className="btn-secondary-white inline-block">
-                Explore Investing
+                Download "Beyond Rentals" Guide
               </Link>
             </div>
           </div>
