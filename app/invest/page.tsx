@@ -110,7 +110,7 @@ export default function InvestPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#learn-more" className="btn-primary">
+              <Link href="/resources" className="btn-primary">
                 Download Free Guide
               </Link>
               <Link href="#book-call" className="btn-secondary-white">
