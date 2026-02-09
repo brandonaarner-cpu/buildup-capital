@@ -1,41 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StructuredData from "@/components/StructuredData";
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: '--font-inter',
-  display: 'swap',
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "BuildUp Capital | Fast Bridge Loans for Real Estate & Business",
-    template: "%s | BuildUp Capital"
-  },
-  description: "Private bridge loans secured by real estate. Rehab, acquisition, asset-backed, and SBA bridge capital. Fast closings. Conservative underwriting. Average 7-day close.",
-  keywords: ["bridge loans", "real estate financing", "rehab loans", "acquisition loans", "asset-backed lending", "SBA bridge loans", "private lending", "fix and flip loans"],
-  authors: [{ name: "BuildUp Capital" }],
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://buildup.capital",
-    siteName: "BuildUp Capital",
-    title: "BuildUp Capital - Fast, Asset-Backed Capital",
-    description: "Private bridge loans for acquisitions, renovations, and complex borrowers. Collateral discipline. Creative structure. Fast closings.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "BuildUp Capital - Fast, Asset-Backed Capital",
-    description: "Private bridge loans for acquisitions, renovations, and complex borrowers. Average 7-day close.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: "BuildUp Capital - Private Credit for Accredited Investors",
+  description: "Diversified monthly income without tenants, toilets, or market whiplash — backed by real assets and managed by lenders with 25 years of experience.",
 };
 
 export default function RootLayout({
@@ -44,13 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <head>
-        <StructuredData />
-      </head>
+    <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <Navigation />
-        <main>{children}</main>
+        <Header />
+        <main className="min-h-screen">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

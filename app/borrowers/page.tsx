@@ -1,188 +1,274 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'For Borrowers',
-  description: 'Financing solutions for real estate investors, small business owners, developers, and portfolio investors.',
-};
+import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 export default function BorrowersPage() {
-  const lanes = [
-    {
-      id: 'real-estate',
-      icon: '🏘️',
-      title: 'Real Estate Investors',
-      description: 'Fix & flip, rental acquisitions, and bridge financing for active investors.',
-      benefits: [
-        'Up to 90% LTC on fix & flip projects',
-        'Fast closings (7-10 days)',
-        'Interest-only payment options',
-        'Multiple exit strategies',
-      ],
-      programs: [
-        { name: 'Rehab & Flip Loans', href: '/rehab-flip-loans' },
-        { name: 'Acquisition Bridge Loans', href: '/acquisition-bridge-loans' },
-      ],
-    },
-    {
-      id: 'business',
-      icon: '💼',
-      title: 'Small Business Owners',
-      description: 'Asset-backed loans and bridge financing to fuel business growth.',
-      benefits: [
-        'Leverage equipment & inventory',
-        'AR financing available',
-        'Flexible repayment terms',
-        'Fast 24-48 hour approvals',
-      ],
-      programs: [
-        { name: 'Asset-Backed Business Loans', href: '/asset-backed-business-loans' },
-        { name: 'SBA Bridge Loans', href: '/sba-bridge-loans' },
-      ],
-    },
-    {
-      id: 'development',
-      icon: '🏗️',
-      title: 'Developers',
-      description: 'Construction and development financing for ground-up and value-add projects.',
-      benefits: [
-        'Ground-up construction loans',
-        'Value-add project financing',
-        'Experienced partner support',
-        'Competitive rates & terms',
-      ],
-      programs: [
-        { name: 'Construction Loans', href: '/apply' },
-        { name: 'Development Financing', href: '/apply' },
-      ],
-    },
-    {
-      id: 'portfolio',
-      icon: '📊',
-      title: 'Portfolio Investors',
-      description: 'Bulk financing solutions for multi-property acquisitions and refinances.',
-      benefits: [
-        'Multi-property financing',
-        'Portfolio refinance options',
-        'Relationship pricing',
-        'Dedicated account management',
-      ],
-      programs: [
-        { name: 'Portfolio Loans', href: '/apply' },
-        { name: 'Bulk Acquisition Financing', href: '/apply' },
-      ],
-    },
-  ];
-
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-blue-600 to-brand-navy-900 text-white section-padding">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-              Financing Built for Your Goals
+    <>
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Capital + Partnership for Growing Businesses
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
-              Whether you're flipping properties, growing a business, or building a portfolio, 
-              we have the right financing solution for you.
+            <p className="text-xl md:text-2xl text-slate-300 mb-8">
+              Real estate-backed lending with a graduation path to traditional financing
             </p>
-            <Link href="/apply" className="btn-primary bg-white text-brand-blue-600 hover:bg-gray-100">
-              Get Started
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Lanes */}
-      {lanes.map((lane, index) => (
-        <section
-          key={lane.id}
-          id={lane.id}
-          className={`section-padding ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
-        >
-          <div className="container-custom">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className={index % 2 === 0 ? 'order-1' : 'order-1 lg:order-2'}>
-                  <div className="text-6xl mb-4">{lane.icon}</div>
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                    {lane.title}
-                  </h2>
-                  <p className="text-xl text-gray-600 mb-6">
-                    {lane.description}
-                  </p>
-                  <ul className="space-y-3 mb-8">
-                    {lane.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <svg className="w-6 h-6 text-brand-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-gray-700">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="/apply" className="btn-primary">
-                      Apply Now
-                    </Link>
-                    <Link href="#programs" className="btn-secondary">
-                      View Programs
-                    </Link>
+      {/* Benefits Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              We Care About How This Ends
+            </h2>
+            <p className="text-xl text-slate-600">
+              Fast funding with transparent terms and strategic support
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-50 p-8 rounded-xl">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Fast Funding</h3>
+              <p className="text-slate-600">
+                From application to funding in days, not months. We understand that timing matters in business.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-xl">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Transparent Terms</h3>
+              <p className="text-slate-600">
+                No hidden fees. No surprises. Clear terms from day one so you can plan with confidence.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-xl">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Strategic Support</h3>
+              <p className="text-slate-600">
+                25 years of experience at your disposal. We help you build systems that banks will love.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal Borrower Profile */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Who We Work With
+            </h2>
+            <p className="text-xl text-slate-600">
+              Growing businesses with real estate collateral
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Ideal For:</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Service businesses with real estate assets</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Fix-and-flip investors needing bridge capital</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Commercial property owners expanding operations</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Businesses growing too fast for banks</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Profitable companies with timing-sensitive opportunities</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Loan Structures:</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                  <span><strong>Bridge Loans:</strong> Short-term capital for acquisitions and renovations</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                  <span><strong>Asset-Backed Loans:</strong> Working capital secured by real estate</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                  <span><strong>Expansion Capital:</strong> Fund growth with flexible terms</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                  <span><strong>Fix & Flip Financing:</strong> Acquisition + rehab in one loan</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lending Process */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Our Process
+            </h2>
+            <p className="text-xl text-slate-600">
+              From application to funding in days
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold text-blue-900 mx-auto mb-6">
+                1
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Application</h3>
+              <p className="text-slate-600">
+                Submit a simple application with details about your business, the property, and how you'll use the capital.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold text-blue-900 mx-auto mb-6">
+                2
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Underwriting</h3>
+              <p className="text-slate-600">
+                We review your business, collateral, and exit strategy. Quick decisions based on judgment, not just formulas.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold text-blue-900 mx-auto mb-6">
+                3
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Funding</h3>
+              <p className="text-slate-600">
+                Clear terms, transparent closing, and fast wire transfer. Typically 3-7 days from approval to funds.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 bg-slate-50 p-8 rounded-xl max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">Typical Timeline</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-blue-900 mb-2">24-48hrs</div>
+                <div className="text-slate-600">Initial Review</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-900 mb-2">2-3 days</div>
+                <div className="text-slate-600">Underwriting</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-900 mb-2">3-7 days</div>
+                <div className="text-slate-600">To Funding</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Graduation Path */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">
+                The Graduation Path
+              </h2>
+              <p className="text-xl text-slate-600">
+                Our goal is to help you grow into traditional bank financing
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <p className="text-lg text-slate-600 mb-6">
+                We're not trying to keep you as a borrower forever. Our mission is to provide capital when traditional banks can't or won't — and help you build the financial history and systems that banks love.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <h4 className="font-bold text-slate-900">Build Track Record</h4>
+                    <p className="text-slate-600">Every on-time payment strengthens your credit profile</p>
                   </div>
                 </div>
-                <div className={`${index % 2 === 0 ? 'order-2' : 'order-2 lg:order-1'} space-y-4`}>
-                  <h3 className="font-semibold text-gray-900 mb-4">Available Programs</h3>
-                  {lane.programs.map((program, idx) => (
-                    <Link
-                      key={idx}
-                      href={program.href}
-                      className="block bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-brand-blue-500 hover:shadow-md transition-all group"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="font-semibold text-gray-900 group-hover:text-brand-blue-600">
-                          {program.name}
-                        </span>
-                        <svg className="w-5 h-5 text-gray-400 group-hover:text-brand-blue-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </Link>
-                  ))}
+
+                <div className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <h4 className="font-bold text-slate-900">Strengthen Financials</h4>
+                    <p className="text-slate-600">We help you implement the reporting systems banks require</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <h4 className="font-bold text-slate-900">Graduate to Banks</h4>
+                    <p className="text-slate-600">When you're ready, we celebrate your success and help with the transition</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-      ))}
 
-      {/* Why Choose BuildUp */}
-      <section className="section-padding bg-brand-blue-600 text-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
-              Why Borrowers Choose BuildUp Capital
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-5xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold mb-2">Speed</h3>
-                <p className="text-blue-100">
-                  Get approved in 24-48 hours and close in 7-10 days. We move at your pace.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl mb-4">🤝</div>
-                <h3 className="text-xl font-bold mb-2">Partnership</h3>
-                <p className="text-blue-100">
-                  We're in it with you for the long haul. Repeat clients get priority treatment.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl mb-4">💡</div>
-                <h3 className="text-xl font-bold mb-2">Flexibility</h3>
-                <p className="text-blue-100">
-                  Custom terms that make sense for your specific situation and goals.
+              <div className="mt-8 p-6 bg-blue-50 rounded-lg">
+                <p className="text-slate-700 italic">
+                  "We care about how this ends. Success for us means you outgrow us."
                 </p>
               </div>
             </div>
@@ -190,27 +276,21 @@ export default function BorrowersPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-padding bg-gray-900 text-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Ready to Get Started?
+      {/* Contact Form Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">
+              Ready to Discuss Your Financing Needs?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of successful investors and business owners who trust BuildUp Capital.
+            <p className="text-xl text-slate-300">
+              Tell us about your business and let's explore how we can help
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/apply" className="btn-primary bg-brand-blue-600 hover:bg-brand-blue-700">
-                Apply Now
-              </Link>
-              <Link href="/how-it-works" className="btn-secondary border-white text-white hover:bg-white/10">
-                Learn How It Works
-              </Link>
-            </div>
           </div>
+
+          <ContactForm context="borrower" />
         </div>
       </section>
-    </div>
+    </>
   );
 }
