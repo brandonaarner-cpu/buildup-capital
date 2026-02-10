@@ -2,6 +2,7 @@ import Link from "next/link";
 import { TestimonialGrid } from '@/components/TestimonialCard';
 import { TrustBadges } from '@/components/TrustBadges';
 import { CaseStudySection } from '@/components/CaseStudyCard';
+import { ABTestedTagline } from '@/components/ABTestedHeadline';
 import testimonials from '@/data/testimonials.json';
 import caseStudies from '@/data/case-studies.json';
 
@@ -27,9 +28,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               BuildUp Capital
             </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-8">
-              Fast bridge loans when timing matters.
-            </p>
+            <ABTestedTagline />
           </div>
 
           {/* Two-Path Split */}
