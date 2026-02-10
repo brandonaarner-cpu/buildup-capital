@@ -15,7 +15,7 @@ export interface ABTest {
 export interface ABTestResult {
   variant: string;
   isControl: boolean;
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackEvent: (eventName: string, properties?: Record<string, string | number | boolean>) => void;
 }
 
 /**
@@ -64,7 +64,7 @@ export function useABTest(test: ABTest): ABTestResult {
     setVariant(assignedVariant);
   }, [test.name]);
 
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+  const trackEvent = (eventName: string, properties?: Record<string, string | number | boolean>) => {
     trackABEvent(eventName, {
       test_name: test.name,
       variant,
@@ -107,10 +107,10 @@ function assignVariant(test: ABTest): string {
 /**
  * Track A/B test event (Google Analytics or custom)
  */
-function trackABEvent(eventName: string, properties: Record<string, any>) {
+function trackABEvent(eventName: string, properties: Record<string, string | number | boolean>) {
   // Google Analytics 4
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', eventName, properties);
+  if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+    (window as unknown as { gtag: (type: string, name: string, params: unknown) => void }).gtag('event', eventName, properties);
   }
   
   // Custom analytics endpoint (optional)
