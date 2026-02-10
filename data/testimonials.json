@@ -1,0 +1,71 @@
+[
+  {
+    "id": "bc-inv-1",
+    "name": "Michael R.",
+    "type": "investor",
+    "investmentSize": "$500K",
+    "quote": "Earning 12% secured by real estate with downside protection. Funded in 9 days when banks wanted 6 months of paperwork.",
+    "metric": "12% return",
+    "timeframe": "9 days to fund",
+    "avatar": "MR",
+    "rating": 5
+  },
+  {
+    "id": "bc-inv-2",
+    "name": "Patricia S.",
+    "type": "investor",
+    "investmentSize": "$250K",
+    "quote": "I've done STRs, syndications, and now private credit. This has the best risk-adjusted returns of anything in my portfolio.",
+    "metric": "Best risk-adjusted returns",
+    "timeframe": "2 years invested",
+    "avatar": "PS",
+    "rating": 5
+  },
+  {
+    "id": "bc-inv-3",
+    "name": "James L.",
+    "type": "investor",
+    "investmentSize": "$1M+",
+    "quote": "Real estate-backed lending with a team that actually understands underwriting. This isn't someone's first rodeo.",
+    "metric": "$1M+ invested",
+    "timeframe": "18 months",
+    "avatar": "JL",
+    "rating": 5
+  },
+  {
+    "id": "bc-bor-1",
+    "name": "Sarah Chen",
+    "company": "Chen Properties LLC",
+    "type": "borrower",
+    "loanSize": "$750K",
+    "quote": "Banks said no. BuildUp said yes in 7 days. My flip is now cash-flowing $8K/month because I didn't miss the deal.",
+    "metric": "$750K funded",
+    "timeframe": "7 days",
+    "avatar": "SC",
+    "rating": 5
+  },
+  {
+    "id": "bc-bor-2",
+    "name": "David Martinez",
+    "company": "Martinez Development",
+    "type": "borrower",
+    "loanSize": "$1.2M",
+    "quote": "They underwrote the deal, not just my credit score. That's how real estate lending should work.",
+    "metric": "$1.2M commercial loan",
+    "timeframe": "10 days",
+    "avatar": "DM",
+    "rating": 5
+  },
+  {
+    "id": "bc-bor-3",
+    "name": "Jennifer Park",
+    "company": "Park Investments",
+    "type": "borrower",
+    "loanSize": "$450K",
+    "quote": "Speed matters in real estate. BuildUp understood that. Funded my multifamily acquisition before the deal died.",
+    "metric": "$450K bridge loan",
+    "timeframe": "5 days",
+    "avatar": "JP",
+    "rating": 5
+  }
+]

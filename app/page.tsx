@@ -1,4 +1,9 @@
 import Link from "next/link";
+import { TestimonialGrid } from '@/components/TestimonialCard';
+import { TrustBadges } from '@/components/TrustBadges';
+import { CaseStudySection } from '@/components/CaseStudyCard';
+import testimonials from '@/data/testimonials.json';
+import caseStudies from '@/data/case-studies.json';
 
 export default function Home() {
   return (
@@ -111,6 +116,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* TRUST BADGES */}
+      <TrustBadges type="buildup-capital" />
 
       {/* Social Proof Bar */}
       <section className="bg-king-gold py-4">
@@ -231,6 +239,43 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* INVESTOR TESTIMONIALS */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-slate-900 mb-4 uppercase tracking-tight">
+              What Investors Say
+            </h2>
+            <p className="text-lg text-slate-600 font-normal">
+              Earning consistent returns secured by real estate
+            </p>
+          </div>
+          <TestimonialGrid testimonials={testimonials.filter((t: any) => t.type === 'investor')} />
+        </div>
+      </section>
+
+      {/* BORROWER TESTIMONIALS */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-slate-900 mb-4 uppercase tracking-tight">
+              What Borrowers Say
+            </h2>
+            <p className="text-lg text-slate-600 font-normal">
+              Fast funding when traditional banks say no
+            </p>
+          </div>
+          <TestimonialGrid testimonials={testimonials.filter((t: any) => t.type === 'borrower')} />
+        </div>
+      </section>
+
+      {/* CASE STUDIES */}
+      <CaseStudySection
+        title="Success Stories"
+        subtitle="Real deals, real results, real people"
+        caseStudies={caseStudies}
+      />
 
       {/* Final CTA */}
       <section className="py-24 bg-slate-900 text-white">

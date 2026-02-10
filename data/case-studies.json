@@ -1,0 +1,60 @@
+[
+  {
+    "id": "cs-bc-1",
+    "business": "buildup-capital",
+    "title": "Real Estate Investor Secures $750K Bridge Loan in 7 Days",
+    "client": "Chen Properties LLC",
+    "type": "borrower",
+    "challenge": "Off-market flip opportunity in competitive market. Traditional banks wanted 45-60 days for approval. Needed funding in under 2 weeks or lose deal.",
+    "solution": "Asset-based underwriting focused on property value and exit strategy, not just borrower credit. Conservative 65% LTV. Clear terms, fast decision.",
+    "results": [
+      {
+        "metric": "$750,000",
+        "description": "Bridge loan funded"
+      },
+      {
+        "metric": "7 days",
+        "description": "Application to funding"
+      },
+      {
+        "metric": "$8,000/mo",
+        "description": "Current cash flow from property"
+      },
+      {
+        "metric": "65% LTV",
+        "description": "Conservative underwriting"
+      }
+    ],
+    "testimonial": "Banks said no. BuildUp said yes in 7 days. My flip is now cash-flowing $8K/month because I didn't miss the deal.",
+    "testimonialAuthor": "Sarah Chen, Owner"
+  },
+  {
+    "id": "cs-bc-2",
+    "business": "buildup-capital",
+    "title": "Accredited Investor Earns 12% on $500K Private Credit Investment",
+    "client": "Michael R.",
+    "type": "investor",
+    "challenge": "Looking for better risk-adjusted returns than stock market volatility. Wanted real estate exposure without active management or tenant headaches.",
+    "solution": "Private credit investment secured by real estate. First-lien position. Conservative LTVs. Borrower vetting by experienced underwriters.",
+    "results": [
+      {
+        "metric": "12%",
+        "description": "Annual return"
+      },
+      {
+        "metric": "$500,000",
+        "description": "Investment amount"
+      },
+      {
+        "metric": "9 days",
+        "description": "Deployment speed"
+      },
+      {
+        "metric": "Zero",
+        "description": "Active management required"
+      }
+    ],
+    "testimonial": "Earning 12% secured by real estate with downside protection. Funded in 9 days when banks wanted 6 months of paperwork.",
+    "testimonialAuthor": "Michael R., Accredited Investor"
+  }
+]
