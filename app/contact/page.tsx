@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import LeadFormBC from "@/components/LeadFormBC";
 
 export default function ContactPage() {
   return (
@@ -13,6 +14,23 @@ export default function ContactPage() {
             <p className="text-xl md:text-2xl text-slate-300">
               Whether you're an investor or borrower, we're here to answer your questions
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Borrower Lead Form Section */}
+      <section className="py-16 bg-king-gold">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-black text-slate-900 mb-4 uppercase">
+              Need Funding?
+            </h2>
+            <p className="text-xl text-slate-800">
+              Get a lending assessment in 60 seconds. No impact to your credit.
+            </p>
+          </div>
+          <div className="bg-white border-2 border-slate-900 shadow-2xl p-8">
+            <LeadFormBC />
           </div>
         </div>
       </section>
